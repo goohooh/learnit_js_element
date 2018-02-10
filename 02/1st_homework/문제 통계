@@ -62,3 +62,51 @@
 
 <5> 124나라의 숫자
 1
+
+
+==========================
+<1> 피보나치, p와 y 갯수, 핸드폰 가리기
+
+function fibonacci(num) {
+	var answer = 0;
+  
+  //피보나치수는 2 이상일때 부터 이전 수와 전 수를 더한 값으로 만들어진다.
+  //1이하일때는 그냥 수를 리턴하고, 그 이상일때는 
+  if(num<=1){
+  return num;
+  }
+  if(num>=2){
+  answer = fibonacci(num-1)+fibonacci(num-2);
+  }
+  return answer;
+}
+//함수 안에 함수를 쓸 수 있는지 잘 알지못해 일단 써보았는데 가능
+//찾아보니 재귀함수인 것 같은데 정확히 이해하진 못함
+
+
+//두번째 if문에서 num>=2이면 제대로 실행되고, num>1 이면 제대로 실행이 안됨. 차이가 궁금.
+
+
+function numPY(s){
+  // 대문자/소문자 구분 조건이 없음에 대해 함수를 찾아봄 - gi = global and case-insensitive
+  // 비교 연산자 이용: === / *length
+	if (s.match(/p/gi).length === s.match(/y/gi).length) {
+      	return true;
+      } else {
+  return false;
+}
+}
+/* p와 y가 하나도 없는 경우를 
+
+if ((s.match(/p/gi).length === s.match(/y/gi).length) || (s.match(/p/gi), s.match(/y/gi) === 0))  { return true; } 이렇게 정의하고 console.log( numPY("sstt") ) 를 불러올 때 왜 true 로 읽지 못하는 지 모르겠습니다. 
+
+// slice라는 배열에서 일부분을 선택하여 새로운 배열로 만들어주는 매서드를 이용..... 
+//*로 표현해줄 문자를 변수에 담고....
+//매개변수 s의 7번째 까지 의 수를 위에 만든 새로운 변수로 반환...하려했지만 에러남 
+function hide_numbers(s){
+    var result = "*******";
+    result += s.slice(7);
+    return result;
+}
+
+<2> 소수 찾기, 가장긴 팰린드롬
