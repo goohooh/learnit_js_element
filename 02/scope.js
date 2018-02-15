@@ -1,3 +1,4 @@
+
 var learnit = 'Study hard';
 
 function fn1(){
@@ -5,6 +6,7 @@ function fn1(){
 	alert(learnit);
 	window.learnit = learnit;
 }
+
 
 function fn2(){
 	alert(learnit);
